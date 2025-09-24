@@ -2,7 +2,7 @@ package ChainOfResponsability;
 
 public class Programa {
     public static void main(String[] args) {
-        System.out.println("===Suporte tecnicoa===");
+        System.out.println("===Suporte tecnico===");
 
         Suporte nivel1=new SuporteNivel1();
         Suporte nivel2= new SuporteNivel2();
