@@ -4,12 +4,11 @@ public class Programa {
     public static void main(String[] args) {
 
         //observador
-        CarroPolicia carropolicia= new CarroPolicia();
+        CarroPolicia policia= new CarroPolicia();
         //observado
         CarroRoubado carroRoubado= new CarroRoubado();
         //adicionando o observado ao observador
-        carroRoubado.addObserver(carropolicia);
-
+        carroRoubado.adicionarObservador(policia);
 
         carroRoubado.direita();
         carroRoubado.frente();

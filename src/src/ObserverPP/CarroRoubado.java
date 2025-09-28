@@ -1,40 +1,45 @@
 package ObserverPP;
 
-import java.util.Observable;
+import java.util.ArrayList;
+import java.util.List;
 
-public class CarroRoubado extends Observable implements Carro {
 
-    private String acao;
+public class CarroRoubado implements Carro {
+    private List<CarroObserver> observadores = new ArrayList<>();
 
+
+
+    public  void adicionarObservador(CarroObserver carro){
+        observadores.add(carro);
+    }
+
+    public void notificarObservador(String acao){
+        for(CarroObserver observador: observadores){
+            observador.atualizar(acao);
+        }
+    }
     @Override
     public void frente() {
-        acao="frente";
         System.out.println("carro roubado segue em frente");
-        this.mudaEstado();
+        notificarObservador("frente");
     }
 
     @Override
     public void esquerda() {
-        acao="esquerda";
         System.out.println("carro roubado vira a esquerda");
-        this.mudaEstado();
+        notificarObservador("esquerda");
     }
 
     @Override
     public void direita() {
-        acao="direita";
         System.out.println("carro roubado vira a direita");
-        this.mudaEstado();
+        notificarObservador("direita");
     }
 
     @Override
     public void para() {
-        acao="para";
         System.out.println("carro roubado para");
-        this.mudaEstado();
+        notificarObservador("para");
     }
-    public void mudaEstado(){
-        setChanged();//mudou o estado
-        notifyObservers(acao);//avisa ao objeto
-    }
+
 }
