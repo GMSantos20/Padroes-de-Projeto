@@ -20,4 +20,3 @@ public class Pedestre {
         mediator.notificar("PEDESTRE_SOLICITA_CRUZAR", this);
     }
 }
-a

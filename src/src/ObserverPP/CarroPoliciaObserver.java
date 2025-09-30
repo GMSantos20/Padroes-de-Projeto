@@ -1,7 +1,7 @@
 package ObserverPP;
 
 
-public class CarroPolicia implements CarroObserver, Carro{
+public class CarroPoliciaObserver implements  CarroObserver,Carro{
     @Override
     public void atualizar(String acao) {
         System.out.print("Policia percebeu a açao: ");

@@ -4,7 +4,7 @@ public class ControladorTransito implements Mediator{
     private Carro carro;
     private Semaforo semaforo;
     private Pedestre pedestre;
-    a
+
 
     public void registrarCarro(Carro carro) {
         this.carro = carro;
