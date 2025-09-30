@@ -17,3 +17,4 @@ public class Semaforo {
         mediator.notificar("SEMAFORO_VERMELHO", this);
     }
 }
+a
