@@ -4,6 +4,11 @@ public class ControladorTransito implements Mediator{
     private Carro carro;
     private Semaforo semaforo;
     private Pedestre pedestre;
+    private Moto moto;
+
+    public void regsitrarMoto(Moto moto){
+        this.moto=moto;
+    }
 
 
     public void registrarCarro(Carro carro) {
@@ -22,13 +27,16 @@ public class ControladorTransito implements Mediator{
     }
 
 
+
     @Override
     public void notificar(String evento, Object origem) {
         if (evento.equals("SEMAFORO_VERDE")) {
             carro.avancar();
+            moto.avançar();
             pedestre.esperar();
         } else if (evento.equals("SEMAFORO_VERMELHO")) {
             carro.parar();
+            moto.parar();
             pedestre.cruzar();
         }else if(evento.equals("PEDESTRE_SOLICITA_CRUZAR")){
             semaforo.mudarParaVermelho();

@@ -8,15 +8,15 @@ public class Pedestre {
     }
 
     public void esperar() {
-        System.out.println("🚶 Pedestre esperando");
+        System.out.println(" Pedestre esperando");
     }
 
     public void cruzar() {
-        System.out.println("🚶 Pedestre cruzando a rua");
+        System.out.println(" Pedestre cruzando a rua");
     }
 
     public void solicitarPassagem() {
-        System.out.println("🚶 Pedestre solicitando para cruzar");
+        System.out.println(" Pedestre solicitando para cruzar");
         mediator.notificar("PEDESTRE_SOLICITA_CRUZAR", this);
     }
 }

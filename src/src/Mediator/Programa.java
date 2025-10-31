@@ -9,11 +9,15 @@ public class Programa {
         Carro carro = new Carro();
         Semaforo semaforo = new Semaforo();
         Pedestre pedestre = new Pedestre();
+        Moto moto = new Moto();
+
 
         // Registra todos no mediator
         mediator.registrarCarro(carro);
         mediator.registrarSemaforo(semaforo);
         mediator.registrarPedestre(pedestre);
+        mediator.regsitrarMoto(moto);
+
 
 
         System.out.println("=== SISTEMA DE TRÂNSITO INICIADO ===\n");
